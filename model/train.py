@@ -23,8 +23,7 @@ model = [("LinearRegression", LinearRegression()), ("Lasso", Lasso()), ("RandomF
 
 def main():
     train_df = dvc_open('data/train.csv', url, branch) 
-    print(train_df.columns)
-    return
+
     X_train, X_test, y_train, y_test = train_test_split(train_df[ml_cols], train_df["count_log"]
                                                         , test_size=0.2, random_state=42)
 
